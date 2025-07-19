@@ -1,6 +1,0 @@
-if SHIELD_JANGO9
-
-config ZMK_KEYBOARD_NAME
-   default "Jango9"
-
-endif
