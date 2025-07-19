@@ -18,7 +18,7 @@
 
       col-gpios = <&gpio0 22 GPIO_OUTPUT_HIGH>,
                   <&gpio0 24 GPIO_OUTPUT_HIGH>,
-                  <&gpio1 00 GPIO_OUTPUT_HIGH>;
+                  <&gpio1 0 GPIO_OUTPUT_HIGH>;
 
       debounce-press-ms = <5>;
       debounce-release-ms = <5>;
