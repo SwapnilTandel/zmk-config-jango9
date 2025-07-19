@@ -12,13 +12,13 @@
       diode-direction = "col2row";
       wakeup-source;
       
-      row-gpios = <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                  <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                  <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+      row-gpios = <&gpio1 13 (GPIO_PULL_UP | GPIO_INPUT)>,
+                  <&gpio1 11 (GPIO_PULL_UP | GPIO_INPUT)>,
+                  <&gpio0 10 (GPIO_PULL_UP | GPIO_INPUT)>;
 
-      col-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>,
-                  <&gpio0 24 GPIO_ACTIVE_HIGH>,
-                  <&gpio1 00 GPIO_ACTIVE_HIGH>;
+      col-gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_OUTPUT)>,
+                  <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_OUTPUT)>,
+                  <&gpio1 00 (GPIO_ACTIVE_HIGH | GPIO_OUTPUT)>;
 
       debounce-press-ms = <5>;
       debounce-release-ms = <5>;
