@@ -47,11 +47,6 @@
             compatible = "zmk,behavior-rgb-underglow-toggle";
             #binding-cells = <0>;
         };
-
-        sleep: sleep {
-            compatible = "zmk,behavior-sleep";
-            #binding-cells = <0>;
-        };
     };
     chosen {
         zmk,kscan = &default_kscan;
