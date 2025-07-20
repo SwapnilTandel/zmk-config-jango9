@@ -7,7 +7,7 @@
    };
 
    default_kscan: kscan {
-      compatible = "zmk,kscan-gpio-matrix,behavior-rgb-underglow-toggle";
+      compatible = "zmk,kscan-gpio-matrix";
       label = "default_kscan";
       diode-direction = "row2col";
       wakeup-source;
@@ -44,5 +44,9 @@
       chain-length = <9>; // 9 NeoKeys
       //data-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>; // Change 3 to your actual data pin
       data-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>; // Change 3 to your actual data pin
+   };
+
+   rgb_ug_toggle: rgb_ug_toggle {
+        compatible = "zmk,behavior-rgb-underglow-toggle";
    };
 };
