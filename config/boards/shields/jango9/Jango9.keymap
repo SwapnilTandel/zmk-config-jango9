@@ -18,7 +18,7 @@
          bindings = <
             &bootloader          &none          &none
             &none          &none          &bt BT_CLR
-            &bt BT_SEL 0   &bt BT_SEL 1   &rgb_ug_toggle
+            &bt BT_SEL 0   &bt BT_SEL 1   &rgb_ug RGB_TOG
          >;
       };
    };
