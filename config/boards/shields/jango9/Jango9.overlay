@@ -42,12 +42,6 @@
 };
 
 / {
-   behaviors {
-        rgb_ug_toggle: rgb_ug_toggle {
-            compatible = "zmk,behavior-rgb-underglow-toggle";
-            #binding-cells = <0>;
-        };
-    };
     chosen {
         zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
