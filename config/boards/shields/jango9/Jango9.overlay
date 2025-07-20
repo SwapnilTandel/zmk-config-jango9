@@ -37,21 +37,15 @@
             RC(2,0) RC(2,1) RC(2,2)
         >;
    };
-   led_strip: neopixel {
-      compatible = "adafruit,neopixel";
-      label = "WS2812";
-      gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;  // Use correct GPIO
-      chain-length = <9>;                  // Number of RGB LEDs
-      status = "okay";
+   ws2812: ws2812 {
+      compatible = "worldsemi,ws2812";
+      label = "ws2812";
+      chain-length = <9>;
+      data-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>; // Change to your actual data pin
    };
-   &zmk {
-      rgb-underglow = &led_strip;
+
+   rgb_ug_toggle: rgb_ug_toggle {
+      compatible = "zmk,behavior-rgb-underglow-toggle";
+      #binding-cells = <0>;
    };
-   //ws2812: ws2812 {
-   //   compatible = "worldsemi,ws2812";
-   //   label = "ws2812";
-   //   chain-length = <9>; // 9 NeoKeys
-   //   //data-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>; // Change 3 to your actual data pin
-   //   data-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>; // Change 3 to your actual data pin
-   //};
 };
