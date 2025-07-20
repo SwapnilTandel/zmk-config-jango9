@@ -1,5 +1,35 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
+&pro_micro {
+   ws2812: ws2812 {
+      compatible = "worldsemi,ws2812";
+      label = "ws2812";
+      chain-length = <9>;
+      data-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>; // your NeoPixel pin
+      color-order = "GRB"; // optional, default is RGB
+      status = "okay";
+   };
+};
+
+&zmk {
+   rgb_underglow: rgb_underglow {
+      compatible = "zmk,rgb-underglow";
+      label = "RGB Underglow";
+      led-strip = <&ws2812>;
+      num-leds = <9>;
+
+      // Optional defaults
+      brightness = <128>;      // 0–255
+      effect = "breathing";    // static, breathing, rainbow_swirl, etc.
+      color = <0xFF 0x00 0x00>; // Red at startup (R G B)
+   };
+
+   rgb_ug_toggle: rgb_ug_toggle {
+      compatible = "zmk,behavior-rgb-underglow-toggle";
+      #binding-cells = <0>;
+   };
+};
+
 / {
    chosen {
       zmk,kscan = &default_kscan;
@@ -36,16 +66,5 @@
         //  Key 7 | Key 8 | Key 9
             RC(2,0) RC(2,1) RC(2,2)
         >;
-   };
-   ws2812: ws2812 {
-      compatible = "worldsemi,ws2812";
-      label = "ws2812";
-      chain-length = <9>;
-      data-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>; // Change to your actual data pin
-   };
-
-   rgb_ug_toggle: rgb_ug_toggle {
-      compatible = "zmk,behavior-rgb-underglow-toggle";
-      #binding-cells = <0>;
    };
 };
