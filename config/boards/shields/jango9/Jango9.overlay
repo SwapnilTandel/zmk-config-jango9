@@ -78,4 +78,7 @@
             RC(2,0) RC(2,1) RC(2,2)
         >;
    };
+   led0: led_0 {
+        status = "disabled";
+    };
 };
