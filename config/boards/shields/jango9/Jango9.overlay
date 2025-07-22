@@ -61,6 +61,13 @@
         zmk,underglow = &led_strip;
     };
 
+   behaviors {
+    studio_unlock: studio_unlock {
+      compatible = "zmk,behavior-reset";
+      #binding-cells = <0>;
+      };
+   };
+
    default_kscan: kscan {
       compatible = "zmk,kscan-gpio-matrix";
       diode-direction = "row2col";
