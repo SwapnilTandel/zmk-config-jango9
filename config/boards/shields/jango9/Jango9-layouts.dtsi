@@ -18,4 +18,14 @@
             , <&key_physical_attrs 100 100  200  200       0     0     0>
             ;
     };
+
+   position_map {
+      compatible = "zmk,physical-layout-position-map";
+
+      macropad_physical_layout {
+         physical-layout = <&macropad_physical_layout>;
+         positions = <>;
+      };
+   };
+   
 };
