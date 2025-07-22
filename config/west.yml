@@ -11,8 +11,7 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
     - name: zmk-anti-idle
-      remote: zmkfirmware
-      revision: main                # or the latest release tag
-      import: app/modules/anti-idle # imports into zmk/app/module/anti-idle
+      remote: kbrd-space
+      revision: main
   self:
     path: config
