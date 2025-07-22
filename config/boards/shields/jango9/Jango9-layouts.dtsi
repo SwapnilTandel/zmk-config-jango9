@@ -1,7 +1,7 @@
 #include <physical_layouts.dtsi>
 
 / {
-    macropad_physical_layout: macropad_physical_layout {
+    jango9_physical_layout: jango9_physical_layout {
         compatible = "zmk,physical-layout";
         display-name = "Macro Pad";
         transform = <&default_transform>;
@@ -22,8 +22,8 @@
    position_map {
       compatible = "zmk,physical-layout-position-map";
 
-      macropad_physical_layout {
-         physical-layout = <&macropad_physical_layout>;
+      jango9_physical_layout {
+         physical-layout = <&jango9_physical_layout>;
          positions = <>;
       };
    };
