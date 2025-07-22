@@ -100,42 +100,12 @@
         >;
    };
 
-   /*
    macropad_physical_layout: macropad_physical_layout {
       compatible = "zmk,physical-layout";
       display-name = "Macro Pad";
       kscan = <&default_kscan>;
       transform = <&default_transform>;
-
-      keys  //                     w   h    x    y     rot    rx    ry
-         = <&key_physical_attrs 100 100    0    0       0     0     0>
-         , <&key_physical_attrs 100 100  100    0       0     0     0>
-         , <&key_physical_attrs 100 100  200    0       0     0     0>
-         , <&key_physical_attrs 100 100    0  100       0     0     0>
-         , <&key_physical_attrs 100 100  100  100       0     0     0>
-         , <&key_physical_attrs 100 100  200  100       0     0     0>
-         , <&key_physical_attrs 100 100    0  200       0     0     0>
-         , <&key_physical_attrs 100 100  100  200       0     0     0>
-         , <&key_physical_attrs 100 100  200  200       0     0     0>
-         ;
    };
-   */
-
-   &physical_layout0 {
-      kscan = <&kscan0>; // Label of the kscan node this layout uses
-      transform = <&default_transform>; // Label of the matrix transform this layout uses
-   };
-
-   /*
-   position_map {
-      compatible = "zmk,physical-layout-position-map";
-
-      physical_layout0 {
-         physical-layout = <&physical_layout0>;
-         positions = <>;
-      };
-    };
-    */
 
    led0: led_0 {
         status = "disabled";
