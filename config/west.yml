@@ -4,6 +4,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: kbrd-space
+      url-base: https://github.com/kbrd-space
   projects:
     - name: zmk
       remote: zmkfirmware
