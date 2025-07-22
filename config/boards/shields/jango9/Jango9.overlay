@@ -46,6 +46,14 @@
 };
 
 / {
+   chosen {
+      zmk,physical-layout = &jango9_physical_layout;
+      zmk,kscan = &default_kscan;
+      zmk,matrix_transform = &default_transform;
+      zmk,underglow = &led_strip;
+   };
+
+
    /* Anti‑idle configuration */
    anti_idle {
       compatible = "zmk,anti-idle-generic";
@@ -56,36 +64,21 @@
    };
    
    jango9_physical_layout: jango9_physical_layout {
-   compatible = "zmk,physical-layout";
-   display-name = "Macro Pad";
-   transform = <&default_transform>;
-   kscan = <&kscan0>;
-   keys  //                     w   h    x    y     rot    rx    ry
-      = <&key_physical_attrs 100 100    0    0       0     0     0>
-      , <&key_physical_attrs 100 100  100    0       0     0     0>
-      , <&key_physical_attrs 100 100  200    0       0     0     0>
-      , <&key_physical_attrs 100 100    0  100       0     0     0>
-      , <&key_physical_attrs 100 100  100  100       0     0     0>
-      , <&key_physical_attrs 100 100  200  100       0     0     0>
-      , <&key_physical_attrs 100 100    0  200       0     0     0>
-      , <&key_physical_attrs 100 100  100  200       0     0     0>
-      , <&key_physical_attrs 100 100  200  200       0     0     0>
-      ;
-   };
-
-   position_map {
-      compatible = "zmk,physical-layout-position-map";
-
-      jango9_physical_layout {
-         physical-layout = <&jango9_physical_layout>;
-         positions = <>;
-      };
-   };
-   chosen {
-      zmk,physical-layout = &jango9_physical_layout;
-      zmk,kscan = &default_kscan;
-      zmk,matrix_transform = &default_transform;
-      zmk,underglow = &led_strip;
+      compatible = "zmk,physical-layout";
+      display-name = "Macro Pad";
+      transform = <&default_transform>;
+      kscan = <&kscan0>;
+      keys  //                     w   h    x    y     rot    rx    ry
+         = <&key_physical_attrs 100 100    0    0       0     0     0>
+         , <&key_physical_attrs 100 100  100    0       0     0     0>
+         , <&key_physical_attrs 100 100  200    0       0     0     0>
+         , <&key_physical_attrs 100 100    0  100       0     0     0>
+         , <&key_physical_attrs 100 100  100  100       0     0     0>
+         , <&key_physical_attrs 100 100  200  100       0     0     0>
+         , <&key_physical_attrs 100 100    0  200       0     0     0>
+         , <&key_physical_attrs 100 100  100  200       0     0     0>
+         , <&key_physical_attrs 100 100  200  200       0     0     0>
+         ;
    };
 
    behaviors {
