@@ -51,7 +51,7 @@
    anti_idle {
       compatible = "zmk,anti-idle-generic";
       interval-ms = <60000>;   // 60 s
-      bindings = <&anti_idle_move MOVE_X(1000) &anti_idle_move MOVE_X(-1000)>;
+      bindings = <&mmv MOVE_X(1000) &mmv MOVE_X(-1000)>;
       tap_ms = <40>;
       wait_ms = <200>;
    };
