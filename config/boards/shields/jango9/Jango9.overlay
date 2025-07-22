@@ -46,7 +46,6 @@
 };
 
 / {
-
    /* Anti‑idle configuration */
    anti_idle {
       compatible = "zmk,anti-idle-generic";
@@ -100,6 +99,34 @@
             RC(2,0) RC(2,1) RC(2,2)
         >;
    };
+
+   macropad_physical_layout: macropad_physical_layout {
+      compatible = "zmk,physical-layout";
+      display-name = "Macro Pad";
+      kscan = <&default_kscan>;
+      transform = <&default_transform>;
+
+      keys  //                     w   h    x    y     rot    rx    ry
+         = <&key_physical_attrs 100 100    0    0       0     0     0>
+         , <&key_physical_attrs 100 100  100    0       0     0     0>
+         , <&key_physical_attrs 100 100  200    0       0     0     0>
+         , <&key_physical_attrs 100 100    0  100       0     0     0>
+         , <&key_physical_attrs 100 100  100  100       0     0     0>
+         , <&key_physical_attrs 100 100  200  100       0     0     0>
+         , <&key_physical_attrs 100 100    0  200       0     0     0>
+         , <&key_physical_attrs 100 100  100  200       0     0     0>
+         , <&key_physical_attrs 100 100  200  200       0     0     0>
+         ;
+   };
+
+   position_map {
+      compatible = "zmk,physical-layout-position-map";
+
+      macropad_physical_layout {
+         physical-layout = <&macropad_physical_layout>;
+         positions = <>;
+      };
+    };
 
    led0: led_0 {
         status = "disabled";
