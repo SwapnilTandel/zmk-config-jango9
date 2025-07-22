@@ -100,13 +100,6 @@
         >;
    };
 
-   macropad_physical_layout: macropad_physical_layout {
-      compatible = "zmk,physical-layout";
-      display-name = "Macro Pad";
-      kscan = <&default_kscan>;
-      transform = <&default_transform>;
-   };
-
    led0: led_0 {
         status = "disabled";
     };
