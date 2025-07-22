@@ -45,16 +45,15 @@
 };
 
 / {
-    anti_idle {
-        compatible = "zmk,anti-idle-generic";
-        interval-ms = <60000>; // How often to send actions (ms)
-        bindings = <&mmv MOVE_X(1000) &mmv MOVE_X(-1000)>; // Actions to perform (e.g., mouse move)
-        tap_ms = <40>;   // Duration of each action (ms)
-        wait_ms = <200>; // Delay between actions (ms)
-    };
-};
 
-/ {
+   /* Anti‑idle configuration */
+   anti_idle {
+      compatible = "zmk,anti-idle-generic";
+      interval-ms = <60000>;   // 60 s
+      bindings = <&anti_idle_move MOVE_X(1000) &anti_idle_move MOVE_X(-1000)>;
+      tap_ms = <40>;
+      wait_ms = <200>;
+   };
 
    /* Declare your 3×3 physical layout */
    jango9_physical: jango9_physical_layout {
