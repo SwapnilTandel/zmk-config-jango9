@@ -75,7 +75,7 @@
    };
    
    chosen {
-      zmk_physical_layout = &jango9_physical_layout;
+      zmk,physical-layout = &jango9_physical_layout;
       zmk,kscan = &default_kscan;
       zmk,matrix_transform = &default_transform;
       zmk,underglow = &led_strip;
