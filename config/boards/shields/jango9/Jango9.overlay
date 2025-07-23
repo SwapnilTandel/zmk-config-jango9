@@ -58,9 +58,9 @@
    anti_idle {
       compatible = "zmk,anti-idle-generic";
       interval-ms = <60000>;   // 60 s
-      bindings = <&mmv MOVE_X(1000) &mmv MOVE_X(-1000)>;
+      bindings = <&mmv MOVE_X(1000) &mmv MOVE_X(-1000) &rgb_ug RGB_TOG>;
       tap_ms = <40>;
-      wait_ms = <200>;
+      wait_ms = <50>;
    };
    
    jango9_physical_layout: jango9_physical_layout {
